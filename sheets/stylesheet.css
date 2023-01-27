@@ -1,0 +1,617 @@
+/*authors: SRIRAJ & TURRA*/
+
+body{
+    font-family:corbel,verdana
+}
+
+/*header*/
+header{
+    background-color: cadetblue;
+    color:white;
+    width: 100%;
+    height:345px;
+}
+
+nav{
+    column-width:20%;
+    column-count:2;
+    column-gap:50%;
+}
+
+.logo{
+    width:60%;
+    height:60%;
+    margin-left: 30%;
+    margin-top: 10%;
+}
+
+/*bouton pour changer la langue*/
+.lang{
+    margin-top:5%;
+    height:35px;
+    width:70px;
+    font-size:85%;
+    font-weight: lighter;
+    color:white;
+    background-color:cadetblue;
+    cursor:pointer;
+    border:none;
+    transition: all 0.9s ease 0s;
+}
+
+.lang:hover{
+    color:lightgray;
+}
+
+/*bouton s'inscrire et articles favoris*/
+.comment{
+    margin-top:5%;
+    height:35px;
+    width:150px;
+    font-size:85%;
+    font-weight: lighter;
+    color:white;
+    background-color:cadetblue;
+    border-radius: 50px;
+    cursor:pointer;
+    border:1px solid white;
+    transition: all 0.9s ease 0s;
+}
+
+.comment:hover{
+    background-color: white;
+    color:cadetblue;
+}
+
+.comment:active{
+    background-color: white;
+    transform:translateY(8px);  /*press effect on click*/
+}
+
+.comment span{
+    cursor:pointer;
+    display:inline-block;
+    position:relative;
+    transition:0.5s;
+}
+
+.comment span:after{
+    content:'\00bb'; /*petite flèche on hover*/
+    position:absolute;
+    opacity:0;
+    top:0;
+    right:-20px;
+    transition:0.5s;
+}
+
+.comment:hover span{
+    padding-right:25px;
+}
+
+.comment:hover span:after{
+    opacity:1;
+    right:0;
+}
+
+
+/*barre de navigation*/
+#menu{
+    text-align: center;
+    background-color:cadetblue;
+    font-size: 20px;
+    font-weight: 900;
+    color: white;
+    margin-top:1%;
+    width : 100%;
+    /*display:block;
+    position:sticky;
+    top:0;*/
+}
+
+#menu li{
+    float:left;
+}
+ 
+#menu a{
+    display:inline-block;
+    background-color:cadetblue;
+    padding:15px 38px;
+    transition: all 0.9s ease 0s;
+}
+
+/*barre de navigation on hover ou on active*/
+#menu a:hover{
+    background-color:lavender;
+    color:black;
+}    
+
+/*dropdown*/
+#menu li.dropdown {
+    display: inline-block;
+}
+
+#menu .dropdown-content {
+    display:none;
+    position:absolute;
+    right:2;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 999;
+}
+  
+#menu .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    font-size:14px;
+    font-weight:500;
+    display: block;
+    text-align: right;
+    background-color: #f9f9f9;
+}
+ 
+/*dropdown on hover*/
+#menu .dropdown-content a:hover {
+    background-color: lavender;
+}
+  
+#menu .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+a{
+    color:inherit; /*a inherit de la couleur de son parent : blanc. permet que ce soit pas bleu*/
+    text-decoration: none; /*permet que ce soit pas souligné*/
+}
+
+/*message pour l'utilisateur connecté*/
+.msg{
+    margin-top:3%;
+    text-align:center;
+    font-size:20px;
+}
+
+/*mosaique pour la page d'accueil*/
+.mosaique{
+    width: 100%;
+    border-width: 0px;
+    border-spacing: 15px;
+}
+
+.mosaique td{
+    height: 120px;
+    border-top-color: red;
+    border-width: 2px 0 0 0 ; /*haut droite bas gauche*/
+    background-color: buttonface;
+}
+
+h3{/*titres pour la page d'accueil*/
+    font-size: 22px;
+    color: darkred;
+    font-family: "Cooper Black";
+}
+
+/*fil d'actualités pour chaque rubrique*/
+.tableau{
+    table-layout: auto;
+    width:100%;
+    text-align: center;
+    border:0;
+    border-spacing: 0 40px; /*vertical horizontal*/
+}
+
+.tableau td{
+    background-color: buttonface;
+}
+ 
+.picture{
+    width:600px;
+    float:left;
+    height:350%;
+}
+ 
+.pre{
+    margin-top: 5%;
+    font-size:25px;
+    text-transform: uppercase;
+}
+
+.pre:hover{
+    text-decoration:underline;
+}
+ 
+.paratexte{
+    font-size:120%;
+    font-style: italic;
+}
+
+/* th pour la mosaique et les fils d'actualités*/
+th{
+    width:200px;
+    font-size: 30px;
+    font-family: "Cooper Black";
+    vertical-align: top;
+    padding-top: 5%;
+    border-width: 0 0 0 1px;
+}
+
+/*articles*/
+/*titre de l'article*/
+h4{
+    font-size: 40px;
+}
+
+.maj{
+    font-size: 16px;
+    color: gray;
+}
+
+/*article en lui même*/
+.blocktext{
+    font-size: 18px;
+    margin-left: auto;
+    margin-right: auto;
+    width:45%; /* permet l'alignement au centre*/
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+
+/*titres au sein des articles*/
+h5{
+    font-size: 25px
+}
+
+.images{
+    width: 100%;
+}
+
+figcaption{
+    font-size: 16px;
+    font-style: italic;
+    margin-top: 0%;
+    color:darkslategray;
+}
+
+.lettrine{
+    margin:1px;
+    font-size: 100px;
+    float : left; /* permet que la lettrine soit "incrustée dans le texte"*/
+    padding-right: 0.2em;
+    line-height: 0.8em;
+    font-family: algerian;
+}
+
+blockquote{
+  margin-left: 8%;
+  margin-right: 8%;
+  border-left: 4px solid gray;
+  padding-left: 20px;  /*espace entre le border vertical et le texte*/
+}
+
+
+/*footer*/
+footer{
+    border-top:2px solid;
+    background:rgb(42, 42, 42);
+    color:rgb(200, 200, 200);
+    width:100%;
+    align-items:flex-start;
+    display:flex;
+    text-align:left;
+    justify-content:center;
+    font-size: 15px;
+}
+
+ul{
+    list-style-type: none;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+footer a:hover{
+    color:rgb(105, 104, 104); 
+}
+
+#socials {
+    padding-bottom:10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+
+/*formulaire inscription et connexion*/
+.block{
+	width:35%;
+    height:900px;
+	position:relative;
+	background-color:ButtonFace;
+	font-size: 16px;
+    font-weight: lighter;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10%;
+    margin-bottom: 10%;
+	border-radius: 5px;
+	overflow:hidden;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+}
+
+.cadrebouton{
+	width:70%;
+	height:4.5%;
+	margin:1em auto;
+	position:relative;
+	background-color:rgb(165, 164, 164);
+	border:1px solid white;
+	border-radius: 50px;
+}
+
+.bouton{
+	background-color:transparent;
+	color:white;
+	font-size:15px;
+	cursor:pointer;
+	padding-left:8%;
+    padding-right:8%;
+    padding-top:1%;
+	position:relative;
+	border:0;
+	margin-top:2%;
+	/*margin-left:3px;*/
+}
+
+#left{
+    float:left;
+}
+
+#right{
+    float:right;
+}
+
+#decobouton{
+	width:50%;
+	height:100%;
+	top:0;
+	left:0;
+	position:absolute;
+	background-color: #9b59b6;
+	transition:0.6s;
+	border-radius: 50px;
+}
+.formul{
+	transition:0.6s;
+	left:20px;
+	position:absolute;
+}
+
+#inscription{
+	left:10%;
+}
+
+#connecter{
+	left:120%;
+}
+
+.align{
+    vertical-align:top;
+}
+
+.attention{
+    margin-top:4%;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.error{
+    color:red;
+    font-size: 13px;
+}
+
+/*formulaire d'information (paramètres du compte)*/
+.container{
+    background-color: buttonface;
+    border-radius:5px;
+    width:35%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    margin-right: auto;
+    margin-left: auto;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+}
+
+.container .title{
+  font-size: 25px;
+  font-weight: 500;
+  position:relative;
+  padding-top:2%;
+  padding-bottom:2%;
+  text-align :center;
+}
+
+.container .title::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 100%;
+  border-radius: 5px;
+  background: linear-gradient(135deg, #71b7e6, #9b59b6);
+  margin-bottom: 1.5%
+}
+
+.content{
+  justify-content: space-between;
+  margin-left: 2%;
+  width:90%;
+}
+
+form .input-box{
+  margin-bottom: 5%;
+  width: 100%;
+}
+
+form .input-submit{
+    margin-bottom: 5%;
+    width: 100%;
+  }
+
+form .radio-box{
+    margin-bottom: 5%;
+    width: 100%;
+}
+
+form .input-box span.details{
+  display: block;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+form .radio-box span.details{
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+form .radio-box span.category{
+    display: inline-block;
+    font-weight: 500;
+    margin-bottom: 5px;
+    margin-right: 10%;
+}
+
+.input-box input{
+  height: 45px;
+  width: 100%;
+  outline: none;
+  font-size: 16px;
+  border-radius: 5px;
+  padding-left: 15px;
+  padding-right: 30px;
+  border: 1px solid #ccc;
+  border-bottom-width: 2px;
+  transition: all 0.3s ease;
+}
+
+.input-submit input{
+    display:inline-block;
+    height: 45px;
+    width: 100%;
+    outline: none;
+    font-size: 16px;
+    border-radius: 5px;
+    padding-left: 15px;
+    border: 1px solid #ccc;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+}
+
+.input-box select{
+    height: 45px;
+    width: 100%;
+    font-size: 16px;
+}
+
+.input-box input[type='password']:focus,
+.input-box input[type='password']:hover{ /*seulement le input mot de passe peut être modifié : c'est le seul avec un focus de couleur*/
+  border-color: #9b59b6;
+}
+
+.block .content .input-box input[type='text']:focus,
+.block .content .input-box input[type='text']:hover,
+.block .content .input-box input[type='date']:focus,
+.block .content .input-box input[type='date']:hover,
+.block .content .input-box input[type='password']:focus,
+.block .content .input-box input[type='password']:hover{ /*seulement le input mot de passe peut être modifié : c'est le seul avec un focus de couleur*/
+  border-color: #9b59b6;
+}
+
+.container form input[type='submit']{
+   height: 100%;
+   width: 100%;
+   border-radius: 5px;
+   border: none;
+   color: #fff;
+   font-size: 18px;
+   font-weight: 500;
+   letter-spacing: 1px;
+   cursor: pointer;
+   transition: all 0.3s ease;
+   background: linear-gradient(135deg, #71b7e6, #9b59b6);
+ }
+
+.container form input[type='submit']:hover{
+  transform: scale(0.99);
+  background: linear-gradient(-135deg, #71b7e6, #9b59b6);
+ }
+
+/*bouton favoris*/
+.fav{
+    border:none;
+    background-color:transparent;
+    cursor:pointer;
+    height:60px;
+    width:60px;
+    font-size: 200%;
+    color:red;
+}
+
+.fav:hover{
+    font-size:250%;
+}
+
+/*titres pour la page favoris*/
+h1{
+    font-size: 22px;
+    color: black;
+    font-family: "Cooper Black";
+}
+
+/*bouton lire l'article pour la page favoris*/
+.read{
+    margin-bottom: 6%;
+    height:35px;
+    width:150px;
+    font-size:85%;
+    font-weight: lighter;
+    color:#9b59b6;
+    background:white;
+    border: 2px solid #9b59b6;
+    border-radius: 5px;
+    cursor:pointer;
+    transition: all 0.9s ease 0s;
+}
+
+.read:hover{
+    background-color: #9b59b6;
+    color:white;
+}
+
+.read span{
+    cursor:pointer;
+    display:inline-block;
+    position:relative;
+    transition:0.5s;
+}
+
+.read span:after{
+    font-family: "Font Awesome 5 Free";
+    display: inline-block;
+    vertical-align: middle;
+    font-weight: 900;
+    content:'\f061'; /*petite flèche on hover*/
+    position:absolute;
+    opacity:0;
+    top:0;
+    right:-20px;
+    transition:0.5s;
+}
+
+.read:hover span{
+    padding-right:25px;
+}
+
+.read:hover span:after{
+    opacity:1;
+    right:0;
+}
